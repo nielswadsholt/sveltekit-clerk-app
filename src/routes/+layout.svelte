@@ -6,12 +6,16 @@
 	import SignedOut from 'clerk-sveltekit/client/SignedOut.svelte'
 </script>
 
-<SignedIn>
-	<UserButton afterSignOutUrl="/" />
-</SignedIn>
-<SignedOut>
-    <SignInButton mode="modal" />
-    <SignUpButton mode="modal" />
-</SignedOut>
+<header>
+    <SignedIn>
+        <UserButton afterSignOutUrl="/" />
+    </SignedIn>
+    <SignedOut>
+        <SignInButton mode="modal" />
+        <SignUpButton mode="modal" />
+    </SignedOut>
+</header>
 
-<slot />
+<main>
+    <slot />
+</main>
