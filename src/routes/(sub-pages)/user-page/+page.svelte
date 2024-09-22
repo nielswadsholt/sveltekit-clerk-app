@@ -1,9 +1,13 @@
 <script>
     import SignedIn from 'clerk-sveltekit/client/SignedIn.svelte';
+	import SignedOut from 'clerk-sveltekit/client/SignedOut.svelte';
 </script>
 
+<h1>User Page</h1>
 <SignedIn let:user>
     {#if !!user}
-        <h1>Welcome {user.fullName ?? user.primaryEmailAddress}!</h1>
+        <p>Welcome {user.fullName ?? user.primaryEmailAddress}!</p>
+        <p>User id: {user.id}</p>
     {/if}
 </SignedIn>
+<SignedOut>You must be signed in to view this page.</SignedOut>
