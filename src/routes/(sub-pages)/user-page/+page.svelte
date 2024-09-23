@@ -8,6 +8,7 @@
     {#if !!user}
         <p>Welcome {user.fullName ?? user.primaryEmailAddress}!</p>
         <p>User id: {user.id}</p>
+        <p>Memberships: {user?.organizationMemberships.map(x => x.organization.name).toString()}</p>
     {/if}
 </SignedIn>
 <SignedOut>You must be signed in to view this page.</SignedOut>
