@@ -34,7 +34,9 @@
                     {/each}
                 {/if}
             {/await}
+        {:else}
+            <p>Only admins are allowed in here.</p>
         {/if}    
     </ClerkLoaded>
 </SignedIn>
-<SignedOut>Only admins are allowed in here.</SignedOut>
+<SignedOut>You must be signed in to view this page.</SignedOut>
