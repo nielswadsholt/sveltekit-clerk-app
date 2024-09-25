@@ -11,12 +11,21 @@
     <SignedIn>
         <div style="display: flex; flex-direction: row; justify-content: space-between;">
             <OrganizationSwitcher />
-            <UserButton afterSignOutUrl="/" />
+            <UserButton afterSignOutUrl="/" showName appearance={{
+                layout: {
+                    shimmer: true
+                },
+                variables: {
+                    colorPrimary: '#114B5F',
+                    colorInputBackground: '#C6DABF',
+                    colorBackground: '#F3E9D2'
+                }
+            }}/>
         </div>
     </SignedIn>
     <SignedOut>
-        <SignInButton mode="modal" />
-        <SignUpButton mode="modal" />
+        <SignInButton mode="modal" style="background-color: #424B54; border-radius: 8px; color: white; padding: 5px 10px;" />
+        <SignUpButton mode="modal" style="background-color: #424B54; border-radius: 8px; color: white; padding: 5px 10px;" />
     </SignedOut>
 </header>
 
