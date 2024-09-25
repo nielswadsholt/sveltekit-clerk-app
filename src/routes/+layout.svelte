@@ -10,7 +10,13 @@
 <header>
     <SignedIn>
         <div style="display: flex; flex-direction: row; justify-content: space-between;">
-            <OrganizationSwitcher />
+            <OrganizationSwitcher appearance={{
+                elements: {
+                    organizationSwitcherPopoverFooter: {
+                        display: "none"
+                    }
+                }
+            }} />
             <UserButton afterSignOutUrl="/" showName appearance={{
                 layout: {
                     shimmer: true
@@ -19,6 +25,11 @@
                     colorPrimary: '#114B5F',
                     colorInputBackground: '#C6DABF',
                     colorBackground: '#F3E9D2'
+                },
+                elements: {
+                    userButtonPopoverFooter: {
+                        display: "none"
+                    }
                 }
             }}/>
         </div>

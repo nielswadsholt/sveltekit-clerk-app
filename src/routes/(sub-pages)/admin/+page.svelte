@@ -15,7 +15,11 @@
 <SignedIn>
     <ClerkLoaded let:clerk>
         {#if !!clerk && checkAuthorization(clerk)}
-            <OrganizationProfile />
+            <OrganizationProfile appearance={{
+                elements: {
+                    // TODO: No way of removing "Secured by Clerk"?
+                }
+            }} />
         {:else}
             <p>Only admins are allowed in here.</p>
         {/if}    
