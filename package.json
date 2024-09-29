@@ -21,6 +21,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"clerk-sveltekit": "^0.4.2"
+		"clerk-sveltekit": "^0.4.2",
+		"mongodb": "^6.9.0"
 	}
 }
