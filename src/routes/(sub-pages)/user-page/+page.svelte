@@ -14,7 +14,7 @@
             body: JSON.stringify({ user_id })
         });
 
-        return await response.json();
+        return await response.json() as Promise<string>;
     }
 </script>
 
