@@ -5,7 +5,7 @@
     let message_fetch : Promise<string>;
 
     const getMessage = async (user_id: string) => {
-        const response = await fetch('/api/db', {
+        const response = await fetch('/api', {
             method: 'POST',
             mode: 'cors',
             headers: {
